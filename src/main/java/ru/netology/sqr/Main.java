@@ -11,7 +11,7 @@ public class Main {
       int downsqr = 300;
       int highsqr = 600;
 
-       int sqrlist = service.SQRRange(10, 99, 300, 600);
+       int sqrlist = service.sqrRange(10, 99, 300, 600);
 
        System.out.println(sqrlist);
     }
