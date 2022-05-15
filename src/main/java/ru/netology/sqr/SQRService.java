@@ -1,7 +1,7 @@
 package ru.netology.sqr;
 
 public class SQRService {
-    public int SQRRange(int down, int high, int downsqr, int highsqr) {
+    public int sqrRange(int down, int high, int downsqr, int highsqr) {
 
         int range = 0;
 
@@ -9,9 +9,10 @@ public class SQRService {
 
             int sqr = (i * i);
 
-            if (downsqr <= sqr && sqr <= highsqr)
+            if (downsqr <= sqr && sqr <= highsqr) {
 
                 range++;
+            }
         }
         return range;
     }
