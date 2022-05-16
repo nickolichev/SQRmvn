@@ -11,29 +11,29 @@ public class SQRServiceTest {
 
         SQRService service = new SQRService();
 
-        int actual = service.sqrRange(10, 99, 300, 600);
+        int actual = service.sqrRange( 300, 600);
         int expected = 7;
 
         assertEquals(actual, expected);
     }
 
     @Test
-    public void shouldCalcSqrListIfUpDown() {
+    public void shouldCalcSqrListIfDownSQR() {
 
         SQRService service = new SQRService();
 
-        int actual1 = service.sqrRange(24, 99, 300, 600);
-        int expected1 = 1;
+        int actual1 = service.sqrRange(50, 600);
+        int expected1 = 15;
 
         assertEquals(actual1, expected1);
     }
 
     @Test
-    public void shouldCalcSqrListIfUnderHigh() {
+    public void shouldCalcSqrListIfHighSQR() {
         SQRService service = new SQRService();
 
-        int actual2 = service.sqrRange(10, 23, 300, 600);
-        int expected2 = 6;
+        int actual2 = service.sqrRange(300, 900);
+        int expected2 = 13;
 
         assertEquals(actual2, expected2);
     }
@@ -42,7 +42,7 @@ public class SQRServiceTest {
     public void shouldCalcSqrListIfUpDownSQR() {
         SQRService service = new SQRService();
 
-        int actual3 = service.sqrRange(10, 99, 590, 600);
+        int actual3 = service.sqrRange(590, 600);
         int expected3 = 0;
 
         assertEquals(actual3, expected3);
@@ -52,7 +52,7 @@ public class SQRServiceTest {
     public void shouldCalcSqrListIfUnderHighSQR() {
         SQRService service = new SQRService();
 
-        int actual4 = service.sqrRange(10, 99, 300, 310);
+        int actual4 = service.sqrRange(300, 310);
         int expected4 = 0;
 
         assertEquals(actual4, expected4);

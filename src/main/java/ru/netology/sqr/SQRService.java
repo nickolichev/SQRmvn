@@ -1,11 +1,11 @@
 package ru.netology.sqr;
 
 public class SQRService {
-    public int sqrRange(int down, int high, int downsqr, int highsqr) {
+    public int sqrRange(int downsqr, int highsqr) {
 
         int range = 0;
 
-        for (int i = down; down <= i && i <= high; i++) {
+        for (int i = 10; 10 <= i && i <= 99; i++) {
 
             int sqr = (i * i);
 
